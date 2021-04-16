@@ -19,7 +19,7 @@ docker push jjssn/docker-solarwinds-dpa:latest
 
 # Docker Pull 
 ```sh
-docker pull jjssn/docker-solarwinds-dpa[:latest]
+docker pull leflay/solarwinds-dpa[:latest]
 ```
  
 Once the docker image is built or pulled from docker hub, Here is the docker run command to start the container. This will create DPA container and start the process. This will run the container in the daemon mode.
@@ -27,5 +27,5 @@ Once the docker image is built or pulled from docker hub, Here is the docker run
 # Docker Run
 
 ```sh
-docker run -d -p 8123:8123  -p 8124:8124 --name=dpainstance jjssn/docker-solarwinds-dpa:latest
+docker run -d -p 8123:8123  -p 8124:8124 --name=dpainstance leflay/solarwinds-dpa:latest
 ```

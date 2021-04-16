@@ -17,6 +17,6 @@ RUN sh dpa_*_installer.sh -- --silent-install && rm dpa_*_installer.sh
 EXPOSE 8123 8124
 WORKDIR /app/dpa_$PRODUCT_DOWNLOAD_DIR
 COPY ./init.sh .
-RUN ./init.sh
+RUN chmod +x init.sh && ./init.sh
 COPY ./wrapper_script.sh .
 CMD [ "./wrapper_script.sh" ]
