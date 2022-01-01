@@ -3,7 +3,7 @@ ENV PRODUCT_DOWNLOAD_DIR=2021.3.7451 PRODUCT_DOWNLOAD_NAME=SolarWinds-DPA-2021.3
 LABEL ProductDownloadName=$PRODUCT_DOWNLOAD_NAME Version=$PRODUCT_DOWNLOAD_DIR ProductName="DPA"
 RUN apt-get -qq update && apt-get -qq -y install wget
 RUN mkdir -p /usr/src/media \
-    && wget -O /usr/src/media/dpa.tar.gz https://downloads.solarwinds.com/solarwinds/Release/DatabasePeformanceAnalyzer-DPA/$PRODUCT_DOWNLOAD_DIR/$PRODUCT_DOWNLOAD_NAME \
+    && wget -O /usr/src/media/dpa.tar.gz https://downloads.solarwinds.com/solarwinds/Release/DPA/$PRODUCT_DOWNLOAD_DIR/$PRODUCT_DOWNLOAD_NAME \
     && tar -xvzf /usr/src/media/dpa.tar.gz -C /usr/src/media
 
 FROM debian:bullseye-slim
