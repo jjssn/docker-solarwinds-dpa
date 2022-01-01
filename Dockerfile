@@ -19,4 +19,4 @@ WORKDIR /app/dpa_$PRODUCT_DOWNLOAD_DIR
 #COPY ./init.sh .
 COPY wrapper_script.sh init.sh ./
 RUN chmod +x wrapper_script.sh
-CMD ./wrapper_script.sh
+CMD ["bash", "wrapper_script.sh"]

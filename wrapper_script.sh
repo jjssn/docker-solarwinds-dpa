@@ -1,13 +1,7 @@
 #!/bin/bash
-
-#Start DPA
+./init.sh
 ./startup.sh -D
-while sleep 60; do
-  ps aux |grep java |grep -q -v grep
-  PROCESS_1_STATUS=$?
-  
-  if [ $PROCESS_1_STATUS -ne 0 ]; then
-    echo "One of the processes has already exited."
-    exit 1
-  fi
+while pgrep -x java >/dev/null; do
+    #echo "DPA is already running"
+    sleep 60s;
 done
