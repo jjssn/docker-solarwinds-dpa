@@ -14,7 +14,7 @@ docker login --username={username}
 This will prompt you to enter the docker hub account password. On successfully logging in, you will be able to push the image to the repository 
 
 ```sh
-docker push leflay/solarwinds-dpa:latest 
+docker push leflay/solarwinds-dpa --all-tags
 ```
 
 # Docker Pull 

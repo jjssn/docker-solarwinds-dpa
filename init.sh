@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Running init.sh script..."
+cd dpa_*
 DIRECTORIES_ARRAY=("iwc/tomcat/conf" "iwc/tomcat/ignite_config" "iwc/tomcat/logs" "iwc/tomcat/licensing") 
 for d in "${DIRECTORIES_ARRAY[@]}"
 do
