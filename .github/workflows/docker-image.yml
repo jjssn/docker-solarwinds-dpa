@@ -25,6 +25,9 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: leflay/solarwinds-dpa
+          tags: |
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
+            type=match,pattern=v(.*),group=1
       -
         name: Login to Docker Hub
         if: github.event_name != 'pull_request'
