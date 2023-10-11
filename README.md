@@ -1,5 +1,12 @@
 # docker-solarwinds-dpa
 
+# IMPORTANT
+
+If you're using Vistual Studio Code make sure to save .sh files as LF
+```sh
+docker run -d -p 8123:8123  -p 8124:8124 --name=dpainstance leflay/solarwinds-dpa:latest
+```
+
 # Docker Build
 
 ```sh
